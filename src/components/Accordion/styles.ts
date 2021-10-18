@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import { IAccordionList } from '../../interfaces/accordion'
 
 export const Div = styled.div`
 
@@ -17,6 +19,8 @@ export const AccordionTrigger = styled.div`
    }
 `
 
-export const Ul = styled.ul`
-
+export const AccordionItems = styled.ul<IAccordionList>`
+   overflow: clip;
+   height: ${props => props?.isOpen ? `${props?.amountOfItems * 51}px` : '0'};
+   transition: all 0.5s ease;
 `

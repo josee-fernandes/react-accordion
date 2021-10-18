@@ -5,3 +5,11 @@ export interface IAccordionItem {
 export interface IAccordion {
    items: IAccordionItem[]
 }
+
+
+// styled
+
+export interface IAccordionList {
+   isOpen?: boolean
+   amountOfItems: number
+}
